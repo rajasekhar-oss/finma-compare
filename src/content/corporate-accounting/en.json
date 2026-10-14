@@ -1,0 +1,126 @@
+{
+  "id": "service-corporate-accounting-tax-returns-en",
+  "schemaVersion": 1,
+  "status": "draft",
+  "locale": "en-CA",
+  "slug": "corporate-accounting-tax-returns",
+  "translationGroupId": "service-corporate-accounting-tax-returns",
+  "navigationLabel": "Corporate Accounting & Tax Returns",
+  "seo": {
+    "title": "Corporate Accounting & Corporate Tax Returns | FINMA",
+    "description": "Corporate accounting, QuickBooks support and federal and provincial corporate tax return preparation and electronic filing. FINMA serves Québec and Canada.",
+    "canonicalPath": "/services/corporate-accounting-tax-returns",
+    "ogImage": "https://finma.ca/assets/valuations-hero-DsXJ0aUk.jpg",
+    "noIndex": true
+  },
+  "hero": {
+    "eyebrow": "Corporate Accounting & Tax",
+    "title": "Corporate Accounting & Tax Returns",
+    "subtitle": "Clear financial records. Confident business decisions.",
+    "body": "FINMA helps incorporated businesses maintain reliable accounts, understand their financial performance and prepare and electronically file Canadian corporate income tax returns—federal and provincial, as applicable. Practical support for businesses in Québec and across Canada.",
+    "image": { "assetKey": "valuationsHero", "alt": "An advisor reviewing financial spreadsheets at a wood-panelled desk beside bound ledgers", "width": 1920, "height": 1080 },
+    "primaryCta": { "label": "Book a Free Consultation", "routeKey": "booking" },
+    "secondaryCta": { "label": "Explore Our Services", "anchor": "accounting-services" },
+    "credentialLine": "Certified Gold QuickBooks ProAdvisor · Service in English and French"
+  },
+  "overview": {
+    "eyebrow": "Accounting that supports your business",
+    "heading": "A stronger financial foundation, throughout the year.",
+    "paragraphs": [
+      "Good accounting gives you more than a year-end balance. It helps you see where your business stands, manage cash flow and prepare for the decisions ahead. FINMA brings corporate accounting, management reporting and corporate tax preparation into a coordinated service tailored to your business.",
+      "Whether you need ongoing support, help organising your books before year-end or preparation of your next corporate tax returns, we begin by reviewing your records, priorities and filing requirements. You receive a clear scope of work and practical guidance at each stage."
+    ]
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "heading": "From day-to-day records to corporate tax filing.",
+    "cards": [
+      { "id": "bookkeeping", "iconKey": "bookOpen", "title": "Corporate Accounting & Bookkeeping", "body": "Keep your business records organised with transaction recording, account reconciliations and a consistent chart of accounts. Monthly or quarterly support is tailored to your operating needs." },
+      { "id": "year-end", "iconKey": "calendarCheck", "title": "Year-End Accounting Preparation", "body": "Bring your records together for year-end with reconciled balances, supporting schedules and financial reports prepared for management and tax-return purposes. Identify missing information and resolve discrepancies before filing." },
+      { "id": "tax-returns", "iconKey": "landmark", "title": "Federal & Provincial Corporate Tax Returns", "body": "Preparation and electronic filing of federal T2 returns and applicable provincial corporate income tax returns, including Québec CO-17 and Alberta AT1 where required and within the agreed mandate." },
+      { "id": "quickbooks", "iconKey": "monitorCog", "title": "QuickBooks Setup & Support", "body": "Set up or organise QuickBooks, improve transaction workflows and make better use of your financial reports. FINMA is a certified Gold QuickBooks ProAdvisor." },
+      { "id": "reporting", "iconKey": "lineChart", "title": "Management Reporting & Cash Flow", "body": "Understand revenue, expenses, margins and cash requirements through practical management reports, budgets and cash-flow forecasts built around your business priorities." },
+      { "id": "cleanup", "iconKey": "eraser", "title": "Accounting Cleanup & Catch-Up", "body": "Address unreconciled accounts, incomplete records and bookkeeping backlogs. We assess the work required, agree on priorities and help prepare a usable accounting foundation for the next reporting or filing cycle." }
+    ],
+    "scopeNote": "The scope, timing and fees for each engagement are agreed after reviewing your business and records."
+  },
+  "filing": {
+    "eyebrow": "Federal & Provincial Filings",
+    "heading": "Corporate tax filing, with the right return for each jurisdiction.",
+    "intro": "FINMA prepares corporate income tax returns from your accounting records and coordinates electronic submission after your review and authorisation. The returns required depend on your corporation’s circumstances and where it carries on business.",
+    "jurisdictions": [
+      { "id": "federal-t2", "title": "Federal T2 and CRA-administered provincial tax", "body": "Federal T2 returns are submitted through the CRA’s Corporation Internet Filing service using certified tax software. The T2 also generally reports provincial and territorial corporation income tax for jurisdictions administered by the CRA." },
+      { "id": "quebec-co17", "title": "Québec CO-17", "body": "Corporations with Québec filing obligations require a separate provincial return. FINMA prepares the CO-17 and arranges electronic filing with Revenu Québec using authorised software, where applicable." },
+      { "id": "alberta-at1", "title": "Alberta AT1", "body": "Where an Alberta return is required, the AT1 is filed separately with Alberta Tax and Revenue Administration. Electronic submission uses Alberta’s net file service where eligible." }
+    ],
+    "closingNote": "We confirm the relevant jurisdictions, required information and filing scope at the start of the engagement. Filing and payment obligations are reviewed separately."
+  },
+  "quickbooks": {
+    "eyebrow": "QuickBooks Expertise",
+    "heading": "FINMA is a certified Gold QuickBooks ProAdvisor.",
+    "body": "Put your accounting software to work for your business. FINMA helps you organise QuickBooks, improve everyday bookkeeping workflows and use financial reports with greater confidence.",
+    "badgeAsset": { "assetKey": "quickbooksGoldBadge", "alt": "QuickBooks ProAdvisor Gold tier badge", "width": 372, "height": 420 },
+    "bullets": [
+      "QuickBooks setup and chart-of-accounts organisation.",
+      "Transaction categorisation and account reconciliation support.",
+      "Cleanup of existing records and practical workflow improvements.",
+      "Reporting guidance to support management and year-end preparation."
+    ],
+    "cta": { "label": "Discuss Your QuickBooks Needs", "routeKey": "contactAccounting" }
+  },
+  "process": {
+    "eyebrow": "How We Work",
+    "heading": "A clear process, from first conversation to filing.",
+    "steps": [
+      { "id": "understand", "title": "Understand your business", "body": "We discuss your corporation, reporting needs, accounting systems and relevant tax jurisdictions, then define the scope and fees." },
+      { "id": "organise", "title": "Organise and review the records", "body": "We agree on a document checklist, review the available records and identify reconciliations or missing information that need attention." },
+      { "id": "prepare", "title": "Prepare and explain", "body": "We prepare the agreed reports and returns, explain key items and obtain your review and authorisation before submission." },
+      { "id": "file", "title": "File and follow through", "body": "We electronically submit eligible returns through the appropriate tax-authority channels and provide copies and filing confirmations. Any ongoing support is defined in your engagement." }
+    ],
+    "principlesText": "Our work reflects FINMA’s TEKIS principles: Trust, Expertise, Knowledge, Integrity and Strategy.",
+    "cta": { "label": "Learn About Our Approach", "routeKey": "ourApproach" }
+  },
+  "whyFinma": {
+    "eyebrow": "Why FINMA",
+    "heading": "Practical accounting. A broader business perspective.",
+    "items": [
+      { "id": "context", "iconKey": "briefcase", "title": "Business context", "body": "Accounting support informed by FINMA’s wider corporate finance and advisory experience." },
+      { "id": "communication", "iconKey": "messageSquare", "title": "Clear communication", "body": "Understand what information is needed, what work is included and what comes next." },
+      { "id": "bilingual", "iconKey": "languages", "title": "Bilingual service", "body": "Work with FINMA in English or French, with attention to Québec and Canadian business requirements." },
+      { "id": "continuity", "iconKey": "link", "title": "Continuity", "body": "Connect ongoing accounting, year-end preparation and corporate tax filing within an agreed engagement." }
+    ]
+  },
+  "faq": {
+    "heading": "Corporate accounting and tax: your questions answered.",
+    "items": [
+      { "id": "federal-provincial", "question": "Do you prepare both federal and provincial corporate tax returns?", "answer": "Yes. FINMA offers preparation and electronic filing of federal T2 returns and applicable provincial corporate income tax returns. The T2 generally includes tax for CRA-administered provinces and territories; Québec and Alberta have separate provincial returns where required. We confirm the filing scope for your corporation before work begins." },
+      { "id": "efile", "question": "Can FINMA electronically file my corporation’s returns?", "answer": "Yes, for eligible returns and after the necessary review and authorisation. Federal returns use Corporation Internet Filing, while separate provincial returns use the appropriate provincial systems. Your enquiry through this website starts a service discussion; it does not file a return." },
+      { "id": "quickbooks-required", "question": "Do I need to use QuickBooks to work with FINMA?", "answer": "Contact us to discuss your current system and records. We assess what can be used and whether cleanup or a transition would be helpful. FINMA is a certified Gold QuickBooks ProAdvisor and can support businesses using QuickBooks." },
+      { "id": "information", "question": "What information will I need to provide?", "answer": "Typically, we start with your prior corporate returns and notices of assessment, year-end date, accounting records, bank and credit-card statements, loan balances and relevant asset and shareholder information. We provide a checklist tailored to the engagement and agree on how documents will be exchanged." },
+      { "id": "cleanup", "question": "Can you help if my books are behind or need cleanup?", "answer": "Yes. We first assess the condition of your records and the work required, then agree on priorities, scope and timing before beginning catch-up work or preparing returns." },
+      { "id": "fees", "question": "How are fees determined?", "answer": "Fees depend on factors such as transaction volume, the condition of your records, the number of entities and jurisdictions, and the reporting or filing work required. We confirm the scope and fees before starting the engagement." },
+      { "id": "french", "question": "Are services available in French?", "answer": "Yes. FINMA provides service in English and French." }
+    ]
+  },
+  "relatedServices": {
+    "eyebrow": "Financial Advisory",
+    "heading": "Support for your next business decision.",
+    "items": [
+      { "label": "Corporate Finance", "body": "Strategic financial advisory for growth, capital and long-term value.", "routeKey": "corporateFinance" },
+      { "label": "Mergers & Acquisitions", "body": "Guidance through buying, selling or combining businesses.", "routeKey": "maAdvisory" },
+      { "label": "Our Approach", "body": "How the TEKIS principles shape every FINMA engagement.", "routeKey": "ourApproach" }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Let’s discuss your business",
+    "heading": "Bring clarity to your accounts and your next corporate tax filing.",
+    "body": "Tell us where your business stands and what support you need. We’ll help define the next steps.",
+    "primaryCta": { "label": "Book a Free Consultation", "routeKey": "booking" },
+    "secondaryCta": { "label": "Contact FINMA", "routeKey": "contact" }
+  },
+  "editorial": {
+    "reviewedAt": "2026-10-14",
+    "sourceReferences": ["Owner-supplied brief (Lovable prompt)", "https://finma.ca/services/corporate-finance", "CRA Corporation Internet Filing", "Revenu Québec CO-17", "Alberta TRA AT1 net file"],
+    "credentialReviewNote": "Claim limited to 'certified Gold QuickBooks ProAdvisor' as supplied by owner. Gold programme tier and individual certification are distinct; confirm both remain current before publishing."
+  }
+}
