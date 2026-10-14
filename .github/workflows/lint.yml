@@ -1,0 +1,62 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Run ESLint
+        run: bun run lint
+
+      - name: Check for stale hero image references
+        run: |
+          if rg -n "strategic-advisory-hero" src/; then
+            echo "❌ Found stale hero image reference(s): strategic-advisory-hero"
+            exit 1
+          fi
+          echo "✅ No stale hero image references found"
+
+      - name: Check FR i18n fallbacks (home, about, financial)
+        run: bun run scripts/check-i18n-fallbacks.ts
+
+      - name: Check for stale route slugs
+        run: |
+          # Disallow legacy nested route slugs under the old IA.
+          # Service sub-pages now live under /services/*, not /financial-advisory/* or /property-management/*.
+          # Pattern matches /financial-advisory/<segment> and /property-management/<segment>
+          # in both default and /fr-prefixed variants.
+          PATTERN='/(fr/)?(financial-advisory|property-management)/[a-z0-9-]+'
+          if rg -n --pcre2 "$PATTERN" src/; then
+            echo "❌ Found stale legacy route slug(s). Service pages must live under /services/*."
+            exit 1
+          fi
+          echo "✅ No stale legacy route slugs found"
+
+      - name: Check for disallowed bg-card usages
+        run: |
+          # Content cards must use the shared `card-finma` utility.
+          # `bg-card` is only allowed in chrome surfaces: Header, BookingModal, and ui/card.tsx.
+          MATCHES=$(rg -n "bg-card" src \
+            --glob '!src/components/ui/card.tsx' \
+            --glob '!src/components/Header.tsx' \
+            --glob '!src/components/BookingModal.tsx' || true)
+          if [ -n "$MATCHES" ]; then
+            echo "❌ Found disallowed bg-card usage(s). Use the card-finma utility instead:"
+            echo "$MATCHES"
+            exit 1
+          fi
+          echo "✅ No disallowed bg-card usages found"
