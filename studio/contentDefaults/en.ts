@@ -40,6 +40,7 @@ export const en = {
     tekis: "TEKIS",
     propertyManagement: "Property Management",
     syndicateManagement: "Management of Syndicates of Co-ownerships",
+    corporateAccounting: "Corporate Accounting and Tax",
     testimonials: "Testimonials",
     contact: "Contact",
     relatedServices: "Related Services",

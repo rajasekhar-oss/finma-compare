@@ -42,6 +42,7 @@ export const fr: typeof en = {
     tekis: "TEKIS",
     propertyManagement: "Gestion immobilière",
     syndicateManagement: "Gestion de syndicats de copropriétés",
+    corporateAccounting: "Comptabilité d'entreprise et impôt",
     testimonials: "Témoignages",
     contact: "Contact",
     relatedServices: "Services connexes",

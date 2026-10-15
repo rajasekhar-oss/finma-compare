@@ -158,12 +158,12 @@ export const BookingButton = ({ variant = "gold", label, className = "" }: Booki
   const { t } = useI18n();
   const text = label ?? t.ui.bookingTitle;
 
-  const base = "group inline-flex items-center justify-center gap-2 font-sans font-semibold tracking-wide transition-all duration-300 ease-out-expo";
+  const base = "group inline-flex items-center justify-center gap-2 font-sans font-semibold tracking-wide transition-all duration-300 ease-out-expo whitespace-nowrap";
   const styles: Record<string, string> = {
     gold: "rounded-full gold-gradient px-6 py-2.5 text-xs text-accent-foreground shadow-gold hover:scale-[1.015] hover:shadow-[0_18px_50px_-12px_hsl(37_37%_55%/0.55)]",
     outline: "rounded-full border border-primary-foreground/30 px-8 py-3.5 text-sm text-primary-foreground hover:border-accent hover:bg-accent/10 hover:text-accent",
     ghost: "rounded-full px-5 py-2 text-sm text-primary-foreground hover:text-accent",
-    compact: "rounded-full gold-gradient px-5 py-2 text-xs text-accent-foreground shadow-gold hover:scale-[1.02]",
+    compact: "rounded-full gold-gradient px-4 py-2 text-xs text-accent-foreground shadow-gold hover:scale-[1.02]",
   };
   return (
    <a

@@ -35,6 +35,7 @@ export const fr: typeof en = {
   nav: {
     about: "À propos",
     whoWeAre: "Qui nous sommes",
+    portfolio: "Portefeuille",
     financialAdvisory: "Conseil financier",
     corporateFinance: "Finance d'entreprise",
     maAdvisory: "Fusions & acquisitions",
@@ -42,6 +43,7 @@ export const fr: typeof en = {
     tekis: "TEKIS",
     propertyManagement: "Gestion immobilière",
     syndicateManagement: "Gestion de syndicats de copropriétés",
+    corporateAccounting: "Comptabilité d'entreprise et impôt",
     testimonials: "Témoignages",
     contact: "Contact",
     relatedServices: "Services connexes",
@@ -382,6 +384,116 @@ export const fr: typeof en = {
     bookingTitle: "Préférez-vous réserver directement ?",
     bookingDesc: "Planifiez une consultation gratuite de 30 minutes avec un associé FINMA.",
     bookingButton: "Réserver une consultation gratuite",
+  },
+
+  corporateAccountingPage: {
+    seo: {
+      title: "Comptabilité et impôt des sociétés | FINMA",
+      description: "Comptabilité d’entreprise, accompagnement QuickBooks et déclarations de revenus fédérales et provinciales des sociétés au Québec et au Canada.",
+    },
+    hero: {
+      eyebrow: "Comptabilité et fiscalité des sociétés",
+      title: "Comptabilité d’entreprise et déclarations de revenus",
+      subtitle: "Des comptes clairs. Des décisions éclairées.",
+      body: "FINMA aide les entreprises constituées en société à tenir une comptabilité fiable, à comprendre leur performance financière et à préparer et transmettre électroniquement leurs déclarations de revenus canadiennes, au fédéral et au provincial, selon le cas. Un accompagnement pratique pour les entreprises du Québec et d’ailleurs au Canada.",
+      primaryCta: "Réserver une consultation gratuite",
+      secondaryCta: "Découvrir nos services",
+      credentialLine: "ProAdvisor QuickBooks certifié de niveau Or · Services en français et en anglais",
+    },
+    overview: {
+      eyebrow: "Une comptabilité au service de votre entreprise",
+      heading: "Une base financière solide, tout au long de l’année.",
+      paragraphs: [
+        "Une bonne comptabilité ne se limite pas à un bilan de fin d’exercice. Elle vous aide à comprendre la situation de votre entreprise, à gérer vos liquidités et à préparer vos prochaines décisions. FINMA réunit la comptabilité d’entreprise, l’information de gestion et la préparation des déclarations de revenus des sociétés dans un service coordonné, adapté à vos besoins.",
+        "Que vous recherchiez un accompagnement régulier, une mise en ordre de vos livres avant la fin de l’exercice ou la préparation de vos prochaines déclarations, nous commençons par examiner vos dossiers, vos priorités et vos obligations de production. Vous bénéficiez d’un mandat clairement défini et d’explications concrètes à chaque étape.",
+      ],
+    },
+    services: {
+      eyebrow: "Nos services",
+      heading: "De la tenue des livres à la production des déclarations de revenus.",
+      cards: [
+        { id: "bookkeeping", iconKey: "bookOpen", title: "Comptabilité d’entreprise et tenue de livres", body: "Organisez vos dossiers grâce à l’enregistrement des opérations, au rapprochement des comptes et à un plan comptable cohérent. L’accompagnement mensuel ou trimestriel est adapté à vos besoins opérationnels." },
+        { id: "year-end", iconKey: "calendarCheck", title: "Préparation comptable de fin d’exercice", body: "Rassemblez vos dossiers de fin d’exercice avec des soldes rapprochés, des tableaux justificatifs et des rapports financiers préparés à des fins de gestion et de production des déclarations. Repérez les renseignements manquants et corrigez les écarts avant la transmission." },
+        { id: "tax-returns", iconKey: "landmark", title: "Déclarations de revenus fédérales et provinciales", body: "Préparation et transmission électronique des déclarations fédérales T2 et des déclarations provinciales applicables, notamment la CO-17 au Québec et l’AT1 en Alberta, lorsqu’elles sont requises et comprises dans le mandat convenu." },
+        { id: "quickbooks", iconKey: "monitorCog", title: "Configuration et accompagnement QuickBooks", body: "Configurez ou organisez QuickBooks, améliorez vos méthodes de travail et utilisez davantage vos rapports financiers. FINMA est un ProAdvisor QuickBooks certifié de niveau Or." },
+        { id: "reporting", iconKey: "lineChart", title: "Information de gestion et trésorerie", body: "Comprenez vos revenus, vos dépenses, vos marges et vos besoins de liquidités grâce à des rapports de gestion, des budgets et des prévisions de trésorerie adaptés à vos priorités." },
+        { id: "cleanup", iconKey: "eraser", title: "Mise à jour et régularisation comptables", body: "Traitez les comptes non rapprochés, les dossiers incomplets et les retards de tenue de livres. Nous évaluons le travail requis, convenons des priorités et vous aidons à établir une base comptable utilisable pour le prochain cycle de production ou de reporting." },
+      ],
+      scopeNote: "L’étendue du mandat, les délais et les honoraires sont convenus après l’examen de votre entreprise et de vos dossiers.",
+    },
+    filing: {
+      eyebrow: "Déclarations fédérales et provinciales",
+      heading: "La bonne déclaration pour chaque administration fiscale.",
+      intro: "FINMA prépare les déclarations de revenus des sociétés à partir de vos documents comptables et coordonne leur transmission électronique après votre révision et votre autorisation. Les déclarations requises dépendent de la situation de votre société et des endroits où elle exerce ses activités.",
+      jurisdictions: [
+        { id: "federal-t2", title: "T2 fédérale et impôt provincial administré par l’ARC", body: "Les déclarations T2 sont transmises par le service de transmission par Internet des déclarations des sociétés de l’ARC, au moyen d’un logiciel certifié. La T2 sert aussi généralement à déclarer l’impôt provincial et territorial des sociétés pour les administrations prises en charge par l’ARC." },
+        { id: "quebec-co17", title: "CO-17 du Québec", body: "Les sociétés assujetties à une obligation de production au Québec doivent produire une déclaration provinciale distincte. FINMA prépare la CO-17 et organise sa transmission électronique à Revenu Québec au moyen d’un logiciel autorisé, selon le cas." },
+        { id: "alberta-at1", title: "AT1 de l’Alberta", body: "Lorsqu’une déclaration albertaine est requise, l’AT1 est produite séparément auprès de Tax and Revenue Administration de l’Alberta. La transmission électronique utilise le service net file de l’Alberta lorsque la déclaration y est admissible." },
+      ],
+      closingNote: "Nous confirmons les administrations concernées, les renseignements requis et l’étendue des travaux de production au début du mandat. Les obligations de production et de paiement sont examinées séparément.",
+    },
+    quickbooks: {
+      eyebrow: "Expertise QuickBooks",
+      heading: "FINMA est un ProAdvisor QuickBooks certifié de niveau Or.",
+      body: "Mettez votre logiciel comptable au service de votre entreprise. FINMA vous aide à organiser QuickBooks, à améliorer vos méthodes de tenue de livres et à utiliser vos rapports financiers avec davantage de confiance.",
+      bullets: [
+        "Configuration de QuickBooks et organisation du plan comptable.",
+        "Accompagnement pour la catégorisation des opérations et le rapprochement des comptes.",
+        "Mise en ordre des dossiers existants et amélioration des méthodes de travail.",
+        "Aide à l’utilisation des rapports pour la gestion et la préparation de fin d’exercice.",
+      ],
+      cta: "Discuter de vos besoins QuickBooks",
+    },
+    process: {
+      eyebrow: "Notre méthode",
+      heading: "Un processus clair, du premier échange à la transmission.",
+      steps: [
+        { id: "understand", title: "Comprendre votre entreprise", body: "Nous discutons de votre société, de vos besoins d’information financière, de vos outils comptables et des administrations fiscales concernées, puis définissons le mandat et les honoraires." },
+        { id: "organise", title: "Organiser et examiner les dossiers", body: "Nous convenons d’une liste de documents, examinons les dossiers disponibles et déterminons les rapprochements à effectuer ainsi que les renseignements manquants." },
+        { id: "prepare", title: "Préparer et expliquer", body: "Nous préparons les rapports et les déclarations convenus, expliquons les principaux éléments et obtenons votre révision et votre autorisation avant la transmission." },
+        { id: "file", title: "Transmettre et assurer le suivi", body: "Nous transmettons électroniquement les déclarations admissibles par les canaux des administrations concernées et vous remettons les copies et confirmations de production. Tout accompagnement continu est défini dans votre mandat." },
+      ],
+      principlesText: "Notre travail s’appuie sur les principes TEKIS de FINMA : confiance, expertise, connaissances, intégrité et stratégie.",
+      cta: "Découvrir notre approche",
+    },
+    whyFinma: {
+      eyebrow: "Pourquoi FINMA",
+      heading: "Une comptabilité concrète. Une vision globale de votre entreprise.",
+      items: [
+        { id: "context", iconKey: "briefcase", title: "Contexte d’affaires", body: "Un accompagnement comptable enrichi par l’expérience de FINMA en finance d’entreprise et en conseil." },
+        { id: "communication", iconKey: "messageSquare", title: "Communication claire", body: "Comprenez les renseignements à fournir, les travaux inclus et les prochaines étapes." },
+        { id: "bilingual", iconKey: "languages", title: "Services bilingues", body: "Travaillez avec FINMA en français ou en anglais, en tenant compte des réalités d’affaires québécoises et canadiennes." },
+        { id: "continuity", iconKey: "link", title: "Continuité", body: "Reliez la comptabilité courante, la préparation de fin d’exercice et les déclarations de revenus dans le cadre d’un mandat convenu." },
+      ],
+    },
+    faq: {
+      heading: "Vos questions sur la comptabilité et la fiscalité des sociétés.",
+      items: [
+        { id: "federal-provincial", question: "Préparez-vous les déclarations fédérales et provinciales des sociétés?", answer: "Oui. FINMA offre la préparation et la transmission électronique des déclarations fédérales T2 et des déclarations provinciales applicables. La T2 comprend généralement l’impôt des provinces et territoires administrés par l’ARC; le Québec et l’Alberta exigent des déclarations provinciales distinctes lorsque celles-ci sont requises. Nous confirmons l’étendue des travaux pour votre société avant de commencer." },
+        { id: "efile", question: "FINMA peut-elle transmettre les déclarations de ma société par voie électronique?", answer: "Oui, pour les déclarations admissibles et après la révision et les autorisations nécessaires. Les déclarations fédérales utilisent le service de transmission par Internet des déclarations des sociétés; les déclarations provinciales distinctes utilisent les systèmes provinciaux appropriés. Une demande envoyée sur ce site amorce une discussion sur nos services; elle ne constitue pas la production d’une déclaration." },
+        { id: "quickbooks-required", question: "Dois-je utiliser QuickBooks pour travailler avec FINMA?", answer: "Communiquez avec nous pour discuter de vos outils et de vos dossiers actuels. Nous évaluons les éléments utilisables et l’utilité éventuelle d’une mise en ordre ou d’une transition. FINMA est un ProAdvisor QuickBooks certifié de niveau Or et peut accompagner les entreprises qui utilisent QuickBooks." },
+        { id: "information", question: "Quels renseignements dois-je fournir?", answer: "Nous commençons généralement par vos déclarations antérieures et avis de cotisation, votre date de fin d’exercice, vos documents comptables, vos relevés bancaires et de cartes de crédit, vos soldes d’emprunts ainsi que les renseignements pertinents sur les actifs et les actionnaires. Nous fournissons une liste adaptée au mandat et convenons de la méthode d’échange des documents." },
+        { id: "cleanup", question: "Pouvez-vous m’aider si ma comptabilité est en retard ou doit être régularisée?", answer: "Oui. Nous évaluons d’abord l’état de vos dossiers et le travail requis, puis convenons des priorités, du mandat et des délais avant d’entreprendre le rattrapage ou la préparation des déclarations." },
+        { id: "fees", question: "Comment les honoraires sont-ils établis?", answer: "Ils dépendent notamment du volume d’opérations, de l’état des dossiers, du nombre d’entités et d’administrations fiscales concernées, ainsi que des rapports ou déclarations à préparer. Le mandat et les honoraires sont confirmés avant le début des travaux." },
+        { id: "french", question: "Les services sont-ils offerts en français?", answer: "Oui. FINMA offre ses services en français et en anglais." },
+      ],
+    },
+    relatedServices: {
+      eyebrow: "Conseil financier",
+      heading: "Un accompagnement pour votre prochaine décision d’affaires.",
+      items: [
+        { label: "Finance d’entreprise", body: "Conseil financier stratégique pour la croissance, le capital et la valeur à long terme.", routeKey: "corporateFinance" },
+        { label: "Fusions et acquisitions", body: "Un accompagnement pour acheter, vendre ou regrouper des entreprises.", routeKey: "maAdvisory" },
+        { label: "Notre approche", body: "Comment les principes TEKIS orientent chaque mandat de FINMA.", routeKey: "ourApproach" },
+      ],
+    },
+    finalCta: {
+      eyebrow: "Parlons de votre entreprise",
+      heading: "Clarifiez vos comptes et préparez votre prochaine déclaration de revenus des sociétés.",
+      body: "Présentez-nous votre situation et le soutien recherché. Nous vous aiderons à définir les prochaines étapes.",
+      primaryCta: "Réserver une consultation gratuite",
+      secondaryCta: "Communiquer avec FINMA",
+    },
   },
 
   footer: {
