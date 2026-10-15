@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/i18n";
 import finmaLogo from "@/assets/finma-full-logo.webp";
@@ -10,6 +10,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -19,24 +20,30 @@ const Header = () => {
     { label: t.nav.about, href: localePath("/about") },
     { label: t.nav.whoWeAre, href: localePath("/who-we-are") },
     {
-      label: t.nav.financialAdvisory,
+      label: t.nav.portfolio,
       href: localePath("/financial-advisory"),
       children: [
-        { label: t.nav.corporateFinance, href: localePath("/services/corporate-finance") },
-        { label: t.nav.maAdvisory, href: localePath("/services/ma-advisory") },
-        { label: t.nav.ourApproach, href: localePath("/services/our-approach") },
-        { label: t.nav.tekis, href: localePath("/services/tekis") },
-      ],
-    },
-    {
-      label: t.nav.corporateAccounting,
-      href: localePath("/services/corporate-accounting-tax-returns"),
-    },
-    {
-      label: t.nav.propertyManagement,
-      href: localePath("/property-management"),
-      children: [
-        { label: t.nav.syndicateManagement, href: localePath("/services/syndicate-management") },
+        {
+          label: t.nav.financialAdvisory,
+          href: localePath("/financial-advisory"),
+          children: [
+            { label: t.nav.corporateFinance, href: localePath("/services/corporate-finance") },
+            { label: t.nav.maAdvisory, href: localePath("/services/ma-advisory") },
+            { label: t.nav.ourApproach, href: localePath("/services/our-approach") },
+            { label: t.nav.tekis, href: localePath("/services/tekis") },
+          ],
+        },
+        {
+          label: t.nav.corporateAccounting,
+          href: localePath("/services/corporate-accounting-tax-returns"),
+        },
+        {
+          label: t.nav.propertyManagement,
+          href: localePath("/property-management"),
+          children: [
+            { label: t.nav.syndicateManagement, href: localePath("/services/syndicate-management") },
+          ],
+        },
       ],
     },
     { label: t.nav.testimonials, href: localePath("/testimonials") },
@@ -52,6 +59,7 @@ const Header = () => {
   useEffect(() => {
     setMobileOpen(false);
     setActiveDropdown(null);
+    setActiveSubDropdown(null);
     setLangOpen(false);
   }, [location]);
 
@@ -78,7 +86,7 @@ const Header = () => {
         borderBottom: scrolled ? "1px solid hsl(var(--accent) / 0.15)" : "1px solid transparent",
       }}
     >
-        <nav className="container mx-auto flex items-center justify-between px-4 py-5 md:px-6 lg:px-6 xl:px-10 lg:py-5">
+      <nav className="container mx-auto flex items-center justify-between px-4 py-5 md:px-6 lg:px-6 xl:px-10 lg:py-5">
         <a href={localePath("/")} className="flex items-center">
           <img src={finmaLogo} alt="FINMA" className="h-24 w-auto object-contain md:h-28 lg:h-32" />
         </a>
@@ -89,20 +97,16 @@ const Header = () => {
               key={item.label}
               className="relative"
               onMouseEnter={() => item.children && setActiveDropdown(item.label)}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseLeave={() => {
+                setActiveDropdown(null);
+                setActiveSubDropdown(null);
+              }}
             >
               <Link
                 to={item.href}
                 className="flex items-center gap-1 whitespace-nowrap text-[10px] font-sans font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-accent"
               >
-                {item.href.includes("corporate-accounting") ? (
-                  <span className="flex flex-col text-center leading-[1.15]">
-                    <span>{locale === "fr" ? "Comptabilité" : "Corporate Accounting"}</span>
-                    <span>{locale === "fr" ? "et impôt" : "and Tax"}</span>
-                  </span>
-                ) : (
-                  <span>{item.label}</span>
-                )}
+                <span>{item.label}</span>
                 {item.children && <ChevronDown className="h-3 w-3" />}
               </Link>
 
@@ -113,16 +117,39 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 top-full mt-2 w-56 rounded-md border border-border bg-card p-2 shadow-xl"
+                    className="absolute left-0 top-full mt-2 w-64 rounded-md border border-border bg-card p-2 shadow-xl"
                   >
                     {item.children.map((child) => (
-                      <Link
+                      <div
                         key={child.label}
-                        to={child.href}
-                        className="block rounded px-4 py-2.5 text-sm font-sans text-card-foreground transition-colors hover:bg-muted"
+                        className="relative"
+                        onMouseEnter={() => setActiveSubDropdown(child.children ? child.label : null)}
+                        onMouseLeave={() => setActiveSubDropdown(null)}
                       >
-                        {child.label}
-                      </Link>
+                        <Link
+                          to={child.href}
+                          className="flex items-center justify-between rounded px-4 py-2.5 text-sm font-sans text-card-foreground transition-colors hover:bg-muted"
+                        >
+                          <span>{child.label}</span>
+                          {child.children && <ChevronRight className="h-3.5 w-3.5 text-muted-foreground" />}
+                        </Link>
+
+                        {child.children && activeSubDropdown === child.label && (
+                          <div className="absolute left-full top-0 -ml-1 pl-2 w-60">
+                            <div className="rounded-md border border-border bg-card p-2 shadow-xl">
+                              {child.children.map((subChild) => (
+                                <Link
+                                  key={subChild.label}
+                                  to={subChild.href}
+                                  className="block rounded px-4 py-2.5 text-sm font-sans text-card-foreground transition-colors hover:bg-muted"
+                                >
+                                  {subChild.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </motion.div>
                 )}
@@ -199,13 +226,23 @@ const Header = () => {
                     {item.label}
                   </Link>
                   {item.children?.map((child) => (
-                    <Link
-                      key={child.label}
-                      to={child.href}
-                      className="block py-2 pl-4 text-sm font-sans text-primary-foreground/60 hover:text-primary-foreground"
-                    >
-                      {child.label}
-                    </Link>
+                    <div key={child.label}>
+                      <Link
+                        to={child.href}
+                        className="block py-2 pl-4 text-sm font-sans text-primary-foreground/60 hover:text-primary-foreground"
+                      >
+                        {child.label}
+                      </Link>
+                      {child.children?.map((subChild) => (
+                        <Link
+                          key={subChild.label}
+                          to={subChild.href}
+                          className="block py-1.5 pl-8 text-xs font-sans text-primary-foreground/50 hover:text-primary-foreground"
+                        >
+                          {subChild.label}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                 </div>
               ))}

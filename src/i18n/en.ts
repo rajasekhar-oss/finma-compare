@@ -33,6 +33,7 @@ export const en = {
   nav: {
     about: "About Us",
     whoWeAre: "Who We Are",
+    portfolio: "Portfolio",
     financialAdvisory: "Financial Advisory",
     corporateFinance: "Corporate Finance",
     maAdvisory: "Mergers & Acquisitions",

@@ -35,6 +35,7 @@ export const fr: typeof en = {
   nav: {
     about: "À propos",
     whoWeAre: "Qui nous sommes",
+    portfolio: "Portefeuille",
     financialAdvisory: "Conseil financier",
     corporateFinance: "Finance d'entreprise",
     maAdvisory: "Fusions & acquisitions",
