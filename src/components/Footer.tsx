@@ -25,7 +25,7 @@ const Footer = () => {
       links: [
         { label: t.footer.maAdvisory, href: localePath("/services/ma-advisory") },
         { label: t.footer.corporateFinance, href: localePath("/services/corporate-finance") },
-        { label: t.footer.corporateAccounting, href: "#" },
+        { label: t.footer.corporateAccounting, href: localePath("/services/corporate-accounting-tax-returns") },
         { label: t.footer.syndicateManagement, href: localePath("/services/syndicate-management") },
         { label: t.footer.propertyManagement, href: localePath("/property-management") },
         { label: t.footer.ourApproach, href: localePath("/services/our-approach") },

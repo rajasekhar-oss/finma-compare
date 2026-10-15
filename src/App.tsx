@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MAAdvisory from "./pages/MAAdvisory";
 import CorporateFinance from "./pages/CorporateFinance";
+import CorporateAccounting from "./pages/CorporateAccountingPage";
 import SyndicateManagement from "./pages/SyndicateManagement";
 import WhoWeAre from "./pages/WhoWeAre";
 import OurApproach from "./pages/OurApproach";
@@ -48,6 +49,7 @@ const LocalizedRoutes = () => (
       <Route path="/contact" element={<Contact />} />
       <Route path="/services/ma-advisory" element={<MAAdvisory />} />
       <Route path="/services/corporate-finance" element={<CorporateFinance />} />
+      <Route path="/services/corporate-accounting-tax-returns" element={<CorporateAccounting />} />
       <Route path="/services/our-approach" element={<OurApproach />} />
       <Route path="/services/tekis" element={<Tekis />} />
       <Route path="/services/syndicate-management" element={<SyndicateManagement />} />

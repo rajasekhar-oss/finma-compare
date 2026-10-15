@@ -29,6 +29,10 @@ const Header = () => {
       ],
     },
     {
+      label: t.nav.corporateAccounting,
+      href: localePath("/services/corporate-accounting-tax-returns"),
+    },
+    {
       label: t.nav.propertyManagement,
       href: localePath("/property-management"),
       children: [
@@ -74,12 +78,12 @@ const Header = () => {
         borderBottom: scrolled ? "1px solid hsl(var(--accent) / 0.15)" : "1px solid transparent",
       }}
     >
-        <nav className="container mx-auto flex items-center justify-between px-4 py-5 md:px-6 lg:px-10 lg:py-5">
+        <nav className="container mx-auto flex items-center justify-between px-4 py-5 md:px-6 lg:px-6 xl:px-10 lg:py-5">
         <a href={localePath("/")} className="flex items-center">
           <img src={finmaLogo} alt="FINMA" className="h-24 w-auto object-contain md:h-28 lg:h-32" />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-4 xl:gap-6 2xl:gap-8 lg:flex">
           {navItems.map((item) => (
             <div
               key={item.label}
@@ -89,9 +93,16 @@ const Header = () => {
             >
               <Link
                 to={item.href}
-                className="flex items-center gap-1 text-[10px] font-sans font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-accent"
+                className="flex items-center gap-1 whitespace-nowrap text-[10px] font-sans font-medium uppercase tracking-wider text-primary-foreground/90 transition-colors hover:text-accent"
               >
-                {item.label}
+                {item.href.includes("corporate-accounting") ? (
+                  <span className="flex flex-col text-center leading-[1.15]">
+                    <span>{locale === "fr" ? "Comptabilité" : "Corporate Accounting"}</span>
+                    <span>{locale === "fr" ? "et impôt" : "and Tax"}</span>
+                  </span>
+                ) : (
+                  <span>{item.label}</span>
+                )}
                 {item.children && <ChevronDown className="h-3 w-3" />}
               </Link>
 

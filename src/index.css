@@ -63,6 +63,8 @@
     --shadow-elegant: 0 20px 60px -20px hsl(218 57% 10% / 0.18);
     --shadow-soft: 0 8px 30px -12px hsl(218 57% 10% / 0.12);
     --shadow-gold: 0 12px 40px -12px hsl(37 37% 55% / 0.35);
+
+    --header-h: 5.5rem;
   }
 
   .dark {
@@ -304,4 +306,114 @@
 
   /* WCAG-safe gold for kicker labels & accents on light surfaces (≥4.5:1 on cream) */
   .text-accent-ink { color: hsl(var(--accent-ink)); }
+  .bg-accent-ink { background-color: hsl(var(--accent-ink)); }
+  .border-accent-ink { border-color: hsl(var(--accent-ink)); }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+    color: hsl(var(--navy));
+    box-shadow: var(--shadow-gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  }
+  .btn-gold:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-cream {
+    border: 1px solid hsl(var(--cream) / 0.45);
+    color: hsl(var(--cream));
+    background: hsl(var(--cream) / 0.04);
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+  .btn-outline-cream:hover {
+    background: hsl(var(--cream) / 0.12);
+    border-color: hsl(var(--cream) / 0.8);
+  }
+
+  .btn-outline-navy {
+    border: 1px solid hsl(var(--navy) / 0.3);
+    color: hsl(var(--navy));
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  .btn-outline-navy:hover {
+    background: hsl(var(--navy));
+    color: hsl(var(--cream));
+  }
+
+  .reveal {
+    animation: finma-reveal 0.7s ease both;
+  }
+  @keyframes finma-reveal {
+    from { opacity: 0.001; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* FINMA navy card: gradient, gold glow, gold-tinted border, top highlight, left rail */
+  .card-finma {
+    --card-text: hsl(var(--cream));
+    --card-muted: hsl(var(--cream) / 0.78);
+    position: relative;
+    overflow: hidden;
+    color: var(--card-text);
+    border: 1px solid hsl(var(--gold) / 0.22);
+    border-left: 3px solid hsl(var(--gold));
+    border-radius: calc(var(--radius) - 4px);
+    background:
+      radial-gradient(120% 80% at 100% 0%, hsl(var(--gold) / 0.12), transparent 55%),
+      linear-gradient(160deg, hsl(var(--navy)), hsl(var(--navy-light)));
+    box-shadow: var(--shadow-elegant);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-finma::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(90deg, hsl(var(--gold-light) / 0.8), transparent);
+  }
+  .card-finma:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, hsl(var(--navy-dark) / 0.75), hsl(var(--navy-dark) / 0.15) 70%),
+      radial-gradient(60% 50% at 15% 85%, hsl(var(--gold) / 0.14), transparent 70%),
+      linear-gradient(180deg, hsl(var(--navy-dark) / 0.78), hsl(var(--navy-dark) / 0.62) 45%, hsl(var(--navy-dark) / 0.75) 80%, hsl(var(--navy-dark) / 0.95));
+  }
+
+  .bg-texture-grid {
+    background-image:
+      linear-gradient(hsl(var(--gold) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--gold) / 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-texture-dots {
+    background-image: radial-gradient(hsl(var(--gold) / 0.18) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  img.tx--soft {
+    opacity: 0.16;
+  }
+
+  img.tx--quiet {
+    opacity: 0.08;
+  }
+
+  .bg-texture-pinstripe-light {
+    background-image: repeating-linear-gradient(90deg, hsl(var(--navy) / 0.035) 0 1px, transparent 1px 29px);
+  }
 }
+
